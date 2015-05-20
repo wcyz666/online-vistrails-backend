@@ -1,0 +1,483 @@
+http://0.0.0.0:9018/
+10.0.22.80:53837 - - [26/Mar/2015 22:43:43] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.80:53837 - - [26/Mar/2015 22:44:04] "HTTP/1.1 POST /vistrails" - 200 OK
+http://0.0.0.0:9018/
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,10.0.22.80:53839 - - [26/Mar/2015 22:44:47] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.80:53840 - - [26/Mar/2015 22:45:49] "HTTP/1.1 POST /vistrails" - 200 OK
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.80:53842 - - [26/Mar/2015 22:47:32] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+10.0.22.80:53844 - - [26/Mar/2015 22:49:24] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.80:53853 - - [26/Mar/2015 22:51:38] "HTTP/1.1 POST /vistrails" - 200 OK
+"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":0,"nodes":[],"connections":[],"groups":[]}
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":156,"y":85,"fields":{"in":[{"name":"in","val":"3"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":383,"y":115,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":505,"y":173.60000610351562,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+3
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in10.0.22.80:53862 - - [26/Mar/2015 22:54:11] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.80:53923 - - [26/Mar/2015 22:58:10] "HTTP/1.1 POST /vistrails" - 200 OK
+","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.80:54105 - - [26/Mar/2015 23:07:18] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+10.0.22.80:54109 - - [26/Mar/2015 23:08:00] "HTTP/1.1 POST /vistrails" - 200 OK
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50504 - - [27/Mar/2015 15:20:48] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"}10.0.22.156:50511 - - [27/Mar/2015 15:21:41] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.156:50523 - - [27/Mar/2015 15:22:44] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.23.104:52896 - - [27/Mar/2015 15:26:24] "HTTP/1.1 POST /vistrails" - 200 OK
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50750 - - [27/Mar/2015 15:57:37] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50881 - - [27/Mar/2015 16:12:23] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+,{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":168.01040649414062,"y":25.111114501953125,"fields":{"in":[{"name":"in","val":"7"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":468.09027433395386,"y":72.10069608688354,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":658.0104064941406,"y":75.61111450195312,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+7
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":62,"y":15,"fields":{"in":[{"name":"in","val":"8"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":313,"y":74,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":457,"y":142,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+8
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":168.01040649414062,"y":25.111114501953125,"fields":{"in":[{"name":"in","val":"7"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":468.09027433395386,"y":72.10069608688354,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":658.0104064941406,"y":75.61111450195312,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":168.01040649414062,"y":2run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50881 - - [27/Mar/2015 16:12:31] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50882 - - [27/Mar/2015 16:12:48] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50884 - - [27/Mar/2015 16:14:40] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50892 - - [27/Mar/2015 16:19:07] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50906 - - [27/Mar/2015 16:20:17] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50908 - - [27/Mar/2015 16:20:41] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50908 - - [27/Mar/2015 16:20:44] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50908 - - [27/Mar/2015 16:20:53] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+http://0.0.0.0:9018/
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":168.01040649414062,"y":25.111114501953125,"fields":{"in":[{"name":"in","val":"7"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":468.09027433395386,"y":72.10069608688354,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":658.0104064941406,"y":75.61111450195312,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":168.01040649414062,"y":25.111114501953125,"fields":{"in":[{"name":"in","val":"7"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":468.09027433395386,"y":72.10069608688354,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":658.0104064941406,"y":75.61111450195312,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":168.01040649414062,"y":25.111114501953125,"fields":{"in":[{"name":"in","val":"7"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":468.09027433395386,"y":72.10069608688354,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":658.0104064941406,"y":75.61111450195312,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+{"uid":12,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":168.01040649414062,"y":25.111114501953125,"fields":{"in":[{"name":"in","val":"7"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"WriteFile","type":"WriteFile","anim":false,"x":468.09027433395386,"y":72.10069608688354,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":8,"name":"FileSink","type":"FileSink","anim":false,"x":658.0104064941406,"y":75.61111450195312,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}}],"connections":[{"id":11,"from_node":1,"from":"out0","to_node":5,"to":"in"},{"id":12,"from_node":5,"from":"out","to_node":8,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"fromrun.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50921 - - [27/Mar/2015 16:21:08] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50946 - - [27/Mar/2015 16:21:50] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50949 - - [27/Mar/2015 16:23:57] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50951 - - [27/Mar/2015 16:24:23] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+http://0.0.0.0:9018/
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from"run.py: cannot connect to X server 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50951 - - [27/Mar/2015 16:24:28] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50952 - - [27/Mar/2015 16:25:18] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:50954 - - [27/Mar/2015 16:25:46] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+http://0.0.0.0:9018/
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from"10.0.22.156:50956 - - [27/Mar/2015 16:26:13] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.156:50995 - - [27/Mar/2015 16:29:18] "HTTP/1.1 POST /vistrails" - 200 OK
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:51235 - - [30/Mar/2015 15:19:40] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+:"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"inrun.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:51255 - - [30/Mar/2015 15:25:39] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:51268 - - [30/Mar/2015 15:41:30] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:51271 - - [30/Mar/2015 15:41:52] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],run.py: cannot connect to X server localhost:10.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:51275 - - [30/Mar/2015 15:42:30] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+10.0.22.156:51279 - - [30/Mar/2015 15:44:10] "HTTP/1.1 POST /vistrails" - 200 OK
+run.py: cannot connect to X server localhost:12.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:51282 - - [30/Mar/2015 15:45:01] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+http://0.0.0.0:9018/
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"frrun.py: cannot connect to X server localhost:12.0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 239, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 230, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 462, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 438, in handle_class
+    return tocall(*args)
+  File "/media/sdb/falcone/nodes-to-vt/rest.py", line 23, in POST
+    with open('/media/sdb/falcone/nodes-to-vt/result.txt', 'r') as f:
+IOError: [Errno 2] No such file or directory: '/media/sdb/falcone/nodes-to-vt/result.txt'
+
+10.0.22.156:51284 - - [30/Mar/2015 15:45:30] "HTTP/1.1 POST /vistrails" - 500 Internal Server Error
+10.0.22.156:51620 - - [30/Mar/2015 16:15:02] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.156:51623 - - [30/Mar/2015 16:15:33] "HTTP/1.1 POST /vistrails" - 200 OK
+http://0.0.0.0:9018/
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,"from":"out","to_node":13,"to":"in0"},{"id":29,"from_node":5,"from":"out","to_node":13,"to":"in1"},{"id":31,"from_node":25,"from":"out","to_node":9,"to":"in"},{"id":32,"from_node":9,"from":"out0","to_node":19,"to":"in"},{"id":34,"from_node":13,"from":"out0","to_node":25,"to":"val"},{"id":35,"from_node":19,"from":"out","to_node":22,"to":"in0"}],"groups":[]}
+71
+{"uid":35,"nodes":[{"nid":1,"name":"Integer","type":"Integer","anim":false,"x":63,"y":39,"fields":{"in":[{"name":"in","val":"4"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":5,"name":"Integer","type":"Integer","anim":false,"x":36,"y":291,"fields":{"in":[{"name":"in","val":"67"}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":9,"name":"Integer","type":"Integer","anim":false,"x":693,"y":227,"fields":{"in":[{"name":"in","val":""}],"out":[{"name":"out","val":0},{"name":"out0"}]}},{"nid":13,"name":"List","type":"List","anim":false,"x":294,"y":179,"fields":{"in":[{"name":"in0"},{"name":"in1"},{"name":"in2","val":""}],"out":[{"name":"out"},{"name":"out0"}]}},{"nid":19,"name":"WriteFile","type":"WriteFile","anim":false,"x":943,"y":432,"fields":{"in":[{"name":"in"}],"out":[{"name":"out"}]}},{"nid":22,"name":"FileSink","type":"FileSink","anim":false,"x":1065,"y":530,"fields":{"in":[{"name":"in"},{"name":"in0"}],"out":[]}},{"nid":25,"name":"Sum","type":"Sum","anim":false,"x":511,"y":304,"fields":{"in":[{"name":"val","val":""}],"out":[{"name":"out"}]}}],"connections":[{"id":28,"from_node":1,10.0.22.156:51624 - - [30/Mar/2015 16:16:04] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.156:52220 - - [30/Mar/2015 18:05:43] "HTTP/1.1 POST /vistrails" - 200 OK
+10.0.22.156:59029 - - [03/Apr/2015 15:18:43] "HTTP/1.1 POST /vistrails" - 200 OK
