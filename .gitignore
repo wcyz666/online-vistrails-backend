@@ -1,4 +1,8 @@
 link.xml
 nodes.json
 nohup.out
-
+test/
+.DS_Store
+matlab.m
+output.xml
+*.pyc

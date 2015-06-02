@@ -197,6 +197,25 @@ def get_port_type(mod_type, port_type):
         }
     }[mod_type][port_type]
 
+
+def port_trans_for_python_source(node, inportname, inporttype, outportname, outporttype):
+    #port
+    #inportlen = len(node['fields']['in'])
+    inportlen = len(node['custom_fields']['inputs'])
+    outportlen = len(node['custom_fields']['outputs'])
+    
+    for i in range(0, inportlen):
+        key = node['fields']['in'][i+1].get('name')
+        inportname[i] = node['custom_fields']['inputs'][key]['key']
+        inporttype[i] = node['custom_fields']['inputs'][key]['type']
+    for i in range(0, outportlen):
+        key = node['fields']['out'][i+1].get('name')
+        outportname[i] = node['custom_fields']['outputs'][key]['key']
+        outporttype[i] = node['custom_fields']['outputs'][key]['type']
+
+
+
+
 with open('nodes.json', 'r') as webfile:
     data = json.load(webfile)
     webfile.close()
@@ -220,14 +239,22 @@ for node in data['nodes']:
     y = node['y']
     
     if type == 'MatlabSource':
+        port_trans_for_python_source(node, inportname, inporttype, outportname, outporttype)
+        # assume all input ports are String
+        inportlen = len(inportname)
+        pre_str = ""
+        for i in range(0, inportlen):
+            pre_str = pre_str + "'" + inportname[i] + "=\\''+" + inportname[i] + "+'\\';'+"
         tmp = node['fields']['in'][0].get('val')
         with open('matlab.m', 'w') as f:
             f.write(tmp)
-        tmp = """from subprocess import call\nmatlab_loc="/var/matlab/bin/matlab"\nfile_loc="./matlab.m"\ncall([matlab_loc, '-nojvm', '-nodisplay', '-r "run ' + file_loc[:-2] + ';exit;"'])"""
+        tmp = """from subprocess import call\nmatlab_loc="/var/matlab/bin/matlab"\ncall([matlab_loc, '-nojvm', '-nodisplay', '-r', """ + pre_str + """ 'matlab;exit;'])"""
         h = HTMLParser.HTMLParser()
         s = h.unescape(tmp)#convert html format into normal string
         value = urllib.quote(s)#convert normal string into url format
         type = 'PythonSource'
+
+
 
     elif type == 'String':
         value = node['fields']['in'][0]['val']
@@ -244,19 +271,22 @@ for node in data['nodes']:
             value = urllib.quote(s)#convert normal string into url format
         else:
             value = ''
-        #port
-        #inportlen = len(node['fields']['in'])
-        inportlen = len(node['custom_fields']['inputs'])
-        outportlen = len(node['custom_fields']['outputs'])
+
+        port_trans_for_python_source(node, inportname, inporttype, outportname, outporttype)
+
+        # #port
+        # #inportlen = len(node['fields']['in'])
+        # inportlen = len(node['custom_fields']['inputs'])
+        # outportlen = len(node['custom_fields']['outputs'])
         
-        for i in range(0, inportlen):
-            key = node['fields']['in'][i+1].get('name')
-            inportname[i] = node['custom_fields']['inputs'][key]['key']
-            inporttype[i] = node['custom_fields']['inputs'][key]['type']
-        for i in range(0, outportlen):
-            key = node['fields']['out'][i+1].get('name')
-            outportname[i] = node['custom_fields']['outputs'][key]['key']
-            outporttype[i] = node['custom_fields']['outputs'][key]['type']
+        # for i in range(0, inportlen):
+        #     key = node['fields']['in'][i+1].get('name')
+        #     inportname[i] = node['custom_fields']['inputs'][key]['key']
+        #     inporttype[i] = node['custom_fields']['inputs'][key]['type']
+        # for i in range(0, outportlen):
+        #     key = node['fields']['out'][i+1].get('name')
+        #     outportname[i] = node['custom_fields']['outputs'][key]['key']
+        #     outporttype[i] = node['custom_fields']['outputs'][key]['type']
     elif type == 'File':
         value = '/PATH' + node['fields']['in'][0]['val']###########
     else:
