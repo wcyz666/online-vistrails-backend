@@ -445,7 +445,7 @@ for mod in modules:
 
     if mod.type == 'FileSink':
         # Location is hard coded for now
-        mod.value = '/Users/yinlin/Desktop/s15/ga/download/nodes-to-vt-test/result.txt'#'/media/sdb/falcone/nodes-to-vt/result.txt'
+        mod.value ='/media/sdb/falcone/nodes-to-vt/result.txt'
         add_value = True
         add_type = 'org.vistrails.vistrails.basic:OutputPath'
         add_name = 'outputPath'
