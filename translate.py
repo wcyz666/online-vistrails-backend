@@ -223,7 +223,7 @@ with open('nodes.json', 'r') as webfile:
 modules = []
 links = []
 integerNodes = []
-count = {'action' : 1, 'add' : 0, 'module' : 0, 'location' : 0, 'connection' : 0, 'port' : 0, 'function' : 0, 'parameter' : 0}
+count = {'action' : 1, 'add' : 0, 'module' : 0, 'location' : 0, 'connection' : 0, 'port' : 0, 'function' : 0, 'parameter' : 0, 'portSpec':0, 'portSpecItem' :0}
 ignoreValueIntegerNode = ''
 
 inportname = {}
@@ -366,17 +366,19 @@ for mod in modules:
 
             count['add'] += 1
             count['location'] += 1
+            count['portSpec'] += 1
+            count['portSpecItem'] += 1
 
             addport[i] = ElementTree.SubElement(act, 'add')
             addport[i].attrib['id'] = str(count['add'])
-            addport[i].attrib['objectId'] = str(j)
+            addport[i].attrib['objectId'] = str(count['portSpec'])
             addport[i].attrib['parentObjId'] = str(count['module'] - 1)
             addport[i].attrib['parentObjType'] = 'module'
             addport[i].attrib['what'] = 'portSpec'
 
 
             innerport[i] = ElementTree.SubElement(addport[i], 'portSpec')
-            innerport[i].attrib['id'] = str(i)
+            innerport[i].attrib['id'] = str(count['portSpec'])
             innerport[i].attrib['maxConns'] = '-1' #dont know
             innerport[i].attrib['minConns'] = '0'
             innerport[i].attrib['name'] = str(inportname[i])
@@ -387,7 +389,7 @@ for mod in modules:
             portspec = ElementTree.SubElement(innerport[i], 'portSpecItem')
             portspec.attrib['default'] = ''
             portspec.attrib['entryType'] = ''
-            portspec.attrib['id'] = str(i)
+            portspec.attrib['id'] = str(count['portSpecItem'])
             portspec.attrib['label'] = ''
             portspec.attrib['module'] = str(inporttype[i])
             portspec.attrib['namespace'] = ''
@@ -400,17 +402,19 @@ for mod in modules:
         for i in range(0, len(outportname)):
             count['add'] += 1
             count['location'] += 1
-
+            count['portSpec'] += 1
+            count['portSpecItem'] += 1
+			
             addport2[i] = ElementTree.SubElement(act, 'add')
             addport2[i].attrib['id'] = str(count['add'])
-            addport2[i].attrib['objectId'] = str(j)
+            addport2[i].attrib['objectId'] = str(count['portSpec'])
             addport2[i].attrib['parentObjId'] = str(count['module'] - 1)
             addport2[i].attrib['parentObjType'] = 'module'
             addport2[i].attrib['what'] = 'portSpec'
 
 
             outterport[i] = ElementTree.SubElement(addport2[i], 'portSpec')
-            outterport[i].attrib['id'] = str(i)
+            outterport[i].attrib['id'] = str(count['portSpec'])
             outterport[i].attrib['maxConns'] = '-1' #dont know
             outterport[i].attrib['minConns'] = '0'
             outterport[i].attrib['name'] = str(outportname[i])
@@ -421,7 +425,7 @@ for mod in modules:
             portspec = ElementTree.SubElement(outterport[i], 'portSpecItem')
             portspec.attrib['default'] = ''
             portspec.attrib['entryType'] = ''
-            portspec.attrib['id'] = str(i)
+            portspec.attrib['id'] = str(count['portSpecItem'])
             portspec.attrib['label'] = ''
             portspec.attrib['module'] = str(outporttype[i])
             portspec.attrib['namespace'] = ''
