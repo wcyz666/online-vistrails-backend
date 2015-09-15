@@ -1,0 +1,29 @@
+{
+	"name_mapping" : {
+		"Integer" : "Integer",
+		"String" : "String",
+		"List" : "List",
+		"ConcatenateString" : "ConcatenateString",
+		"WriteFile" : "WriteFile",
+		"FileSink" : "FileSink",
+		"Sum" : "Sum",
+		"PythonSource" : "PythonSource",
+		"File" : "File",
+ 		"MatlabSource" : "MatlabSource",
+		"Float" : "Float"
+	},
+	"package_mapping" : {
+		"Integer" : "org.vistrails.vistrails.basic",
+		"String" : "org.vistrails.vistrails.basic",
+		"List" : "org.vistrails.vistrails.basic",
+		"ConcatenateString" : "org.vistrails.vistrails.basic",
+		"WriteFile" : "org.vistrails.vistrails.basic",
+		"FileSink" : "org.vistrails.vistrails.basic",
+   		"Sum" : "org.vistrails.vistrails.control_flow",
+		"PythonSource" : "org.vistrails.vistrails.basic",
+ 		"MatlabSource" : "org.vistrails.vistrails.basic",
+   		"File" : "org.vistrails.vistrails.basic",
+		"Float" : "org.vistrails.vistrails.basic"
+	}
+}
+

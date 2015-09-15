@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import json
 import xml.etree.ElementTree as ElementTree
 from pprint import pprint
@@ -6,196 +8,9 @@ from link import Link
 from module import Module
 import HTMLParser
 import urllib
-
+import web2vt 
 
 # Go from web name to vt name
-def rename(name):
-    return {
-        'Integer' : 'Integer',
-        'String' : 'String',
-        'List' : 'List',
-        'ConcatenateString' : 'ConcatenateString',
-        'WriteFile' : 'WriteFile',
-        'FileSink' : 'FileSink',
-        'Sum' : 'Sum',
-        'PythonSource' : 'PythonSource',
-        'File' : 'File',
-        'MatlabSource' : 'MatlabSource',
-    }[name]
-
-# Get the package name from the vt name
-def get_package(name):
-    return {
-        'Integer' : 'org.vistrails.vistrails.basic',
-        'String' : 'org.vistrails.vistrails.basic',
-        'List' : 'org.vistrails.vistrails.basic',
-        'ConcatenateString' : 'org.vistrails.vistrails.basic',
-        'WriteFile' : 'org.vistrails.vistrails.basic',
-        'FileSink' : 'org.vistrails.vistrails.basic',
-        'Sum' : 'org.vistrails.vistrails.control_flow',
-        'PythonSource' : 'org.vistrails.vistrails.basic',
-        'MatlabSource' : 'org.vistrails.vistrails.basic',
-        'File' : 'org.vistrails.vistrails.basic'
-    }[name]
-
-def get_signature(mod_type, port_type):
-    return {
-        'Integer' : {
-            'out' : '(org.vistrails.vistrails.basic:Integer)',
-            'out0': '(org.vistrails.vistrails.basic:Integer)',
-            'in' : '(org.vistrails.vistrails.basic:Integer)'
-        },
-        'String' : {
-            'out' : '(org.vistrails.vistrails.basic:String)',
-            'string' : '(org.vistrails.vistrails.basic:String)'
-        },
-        'List' : {
-            'in0' : '(org.vistrails.vistrails.basic:Module)',
-            'in1' : '(org.vistrails.vistrails.basic:Module)',
-            'out0' : '(org.vistrails.vistrails.basic:List)'
-        },
-        'ConcatenateString' : {
-            'val1' : '(org.vistrails.vistrails.basic:String)',
-            'val2' : '(org.vistrails.vistrails.basic:String)',
-            'out' : '(org.vistrails.vistrails.basic:String)'
-        },
-        'WriteFile' : {
-            'in' : '(org.vistrails.vistrails.basic:String)',
-            'out' : '(org.vistrails.vistrails.basic:File)'
-        },
-        'FileSink' : {
-            'in0' : '(org.vistrails.vistrails.basic:File)',
-        },
-        'Sum' : {
-            'val' : '(org.vistrails.vistrails.basic:List)',
-            'out' : '(org.vistrails.vistrails.basic:Variant)'
-        },
-        'PythonSource' : {
-            'out' : '(org.vistrails.vistrails.basic:String)'
-            #default : '(org.vistrails.vistrails.basic:String)'
-        },
-        'MatlabSource' : {
-            'out' : '(org.vistrails.vistrails.basic:String)'
-            #default : '(org.vistrails.vistrails.basic:String)'
-        },
-        'File' : {
-            'out' : '(org.vistrails.vistrails.basic:File)'
-        }
-
-    }[mod_type][port_type]
-
-# Get the version from the vt name
-def get_version(name):
-    return {
-        'Integer' : '2.1',
-        'String' : '2.1',
-        'List' : '2.1',
-        'ConcatenateString' : '2.1',
-        'WriteFile' : '2.1',
-        'FileSink' : '2.1',
-        'Sum' : '0.2.4',
-        'PythonSource' : '2.1',
-        'MatlabSource' : '2.1',
-        'File' : '' ####################
-    }[name]
-
-def get_port_name(mod_type, port_type):
-    return {
-        'Integer' : {
-            'out' : 'value',
-            'out0': 'value_as_string',
-            'in' : 'value'
-        },
-        'String' : {
-            'out' : 'value',
-            'string' : 'value'
-        },
-        'List' : {
-            'in0' : 'head',
-            'in1' : 'head',
-            'out0' : 'value'
-        },
-        'ConcatenateString' : {
-            'val1' : 'str1',
-            'val2' : 'str2',
-            'out' : 'value'
-        },
-        'WriteFile' : {
-            'in' : 'in_value',
-            'out' : 'out_value'
-        },
-        'FileSink' : {
-            'in0' : 'file'
-        },
-        'Sum' : {
-            'val' : 'InputList',
-            'out' : 'Result'
-        },
-        'PythonSource' : {
-            'out' : 'source',
-            'string' : 'source'
-            #defalut : port type
-        },
-        'MatlabSource' : {
-            'out' : 'source',
-            'string' : 'source'
-            #defalut : port type
-        },
-        'File' : {
-            'out' : 'source'
-        }
-    }[mod_type][port_type]
-
-def get_port_type(mod_type, port_type):
-    return {
-        'Integer' : {
-            'out' : 'source',
-            'out0': 'source',
-            'in' : 'destination'
-        },
-        'String' : {
-            'out' : 'source',
-            'string' : 'destination'
-        },
-        'List' : {
-            'in0' : 'destination',
-            'in1' : 'destination',
-            'out0' : 'source'
-        },
-        'ConcatenateString' : {
-            'val1' : 'destination',
-            'val2' : 'destination',
-            'out' : 'source'
-        },
-        'WriteFile' : {
-            'out' : 'source',
-            'in' : 'destination'
-        },
-        'FileSink' : {
-            'in0' : 'destination'
-        },
-        'Sum' : {
-            'val' : 'destination',
-            'out' : 'source'
-        },
-        'PythonSource' : {
-            'out' : 'source',
-            'string' : 'destination',
-            'custom_in' : 'destination',
-            'custom_out' : 'source'
-            #default : 'destination'
-        },
-        'MatlabSource' : {
-            'out' : 'source',
-            'string' : 'destination',
-            'custom_in' : 'destination',
-            'custom_out' : 'source'
-            #default : 'destination'
-        },
-        'File' : {
-            'out' : 'source'
-        }
-    }[mod_type][port_type]
 
 
 def port_trans_for_python_source(node, inportname, inporttype, outportname, outporttype):
@@ -218,7 +33,6 @@ def port_trans_for_python_source(node, inportname, inporttype, outportname, outp
 
 with open('nodes.json', 'r') as webfile:
     data = json.load(webfile)
-    webfile.close()
 
 modules = []
 links = []
@@ -234,7 +48,7 @@ outporttype = {}
 for node in data['nodes']:
 
     id = node['nid']
-    type = rename(node['type'])
+    type = web2vt.rename(node['type'])
     x = node['x']
     y = node['y']
     
@@ -334,11 +148,11 @@ for mod in modules:
     inner.attrib['id'] = str(count['module'])
     inner.attrib['name'] = mod.type
     inner.attrib['namespace'] = ''
-    inner.attrib['package'] = get_package(mod.type)
-    inner.attrib['version'] = get_version(mod.type)
+    inner.attrib['package'] = web2vt.get_package(mod.type)
+    inner.attrib['version'] = web2vt.get_version(mod.type)
 
     mod.vt_id = count['module']
-    mod.package = get_package(mod.type)
+    mod.package = web2vt.get_package(mod.type)
     count['add'] += 1
     count['action'] += 1
     count['module'] += 1
@@ -393,7 +207,7 @@ for mod in modules:
             portspec.attrib['label'] = ''
             portspec.attrib['module'] = str(inporttype[i])
             portspec.attrib['namespace'] = ''
-            portspec.attrib['package'] = str(get_package(inporttype[i]))#'org.vistrails.vistrails.basic'#get_package(inporttype[i+1])
+            portspec.attrib['package'] = str(web2vt.get_package(inporttype[i]))#'org.vistrails.vistrails.basic'#get_package(inporttype[i+1])
             portspec.attrib['pos'] = '0'
             portspec.attrib['value'] = ''
 
@@ -429,7 +243,7 @@ for mod in modules:
             portspec.attrib['label'] = ''
             portspec.attrib['module'] = str(outporttype[i])
             portspec.attrib['namespace'] = ''
-            portspec.attrib['package'] = str(get_package(outporttype[i]))#'org.vistrails.vistrails.basic'#get_package(inporttype[i+1])
+            portspec.attrib['package'] = str(web2vt.get_package(outporttype[i]))#'org.vistrails.vistrails.basic'#get_package(inporttype[i+1])
             portspec.attrib['pos'] = '0'
             portspec.attrib['value'] = ''
 
@@ -550,7 +364,7 @@ for link in links:
     except KeyError:
         port.attrib['name'] = str(modport1)#inportname[0]
     try:
-        port.attrib['signature'] = get_signature(mod1.type, link.port_a)
+        port.attrib['signature'] = web2vt.get_signature(mod1.type, link.port_a)
     except KeyError:
         port.attrib['signature'] = '(org.vistrails.vistrails.basic:String)'
     try:
@@ -588,7 +402,7 @@ for link in links:
     except KeyError:
         port2.attrib['name'] = str(modport2)
     try:
-        port2.attrib['signature'] = get_signature(mod2.type, link.port_b)
+        port2.attrib['signature'] = web2vt.get_signature(mod2.type, link.port_b)
     except KeyError:
         port2.attrib['signature'] = '(org.vistrails.vistrails.basic:String)'
     try:
