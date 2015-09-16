@@ -183,6 +183,18 @@
     	"File" : {
         	"out" : "source"
 	    }
+	},
+	"init_count" : {
+		"action" : 1, 
+		"add" : 0, 
+		"module" : 0, 
+		"location" : 0, 
+		"connection" : 0, 
+		"port" : 0, 
+		"function" : 0, 
+		"parameter" : 0, 
+		"portSpec":0, 
+		"portSpecItem" :0
 	}
 }
 

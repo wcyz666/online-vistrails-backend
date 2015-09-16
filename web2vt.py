@@ -24,6 +24,9 @@ def get_port_name(mod_type, port_type):
 def get_port_type(mod_type, port_type):
     return config_obj["port_type_mapping"][mod_type][port_type]
 
+def get_init_count():
+	return config_obj["init_count"]
+	
 if __name__== "__main__":
 	assert rename("List") == "List"
 	assert get_package("Integer") == "org.vistrails.vistrails.basic"
@@ -31,3 +34,4 @@ if __name__== "__main__":
 	assert get_version("Integer") == "2.1"
 	assert get_port_name("Float", "out0") == "value_as_string"
 	assert get_port_type("MatlabSource", "custom_out") == "source"
+	assert get_init_count()['action'] == 1

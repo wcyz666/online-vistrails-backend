@@ -10,8 +10,6 @@ import HTMLParser
 import urllib
 import web2vt 
 
-# Go from web name to vt name
-
 
 def port_trans_for_python_source(node, inportname, inporttype, outportname, outporttype):
     #port
@@ -37,7 +35,7 @@ with open('nodes.json', 'r') as webfile:
 modules = []
 links = []
 integerNodes = []
-count = {'action' : 1, 'add' : 0, 'module' : 0, 'location' : 0, 'connection' : 0, 'port' : 0, 'function' : 0, 'parameter' : 0, 'portSpec':0, 'portSpecItem' :0}
+count = web2vt.get_init_count()
 ignoreValueIntegerNode = ''
 
 inportname = {}
@@ -47,10 +45,8 @@ outporttype = {}
 # Read in all the nodes from json
 for node in data['nodes']:
 
-    id = node['nid']
     type = web2vt.rename(node['type'])
-    x = node['x']
-    y = node['y']
+    (id, x, y) = (node['nid'], node['x'], node['y'])
     
     if type == 'MatlabSource':
         port_trans_for_python_source(node, inportname, inporttype, outportname, outporttype)
@@ -68,12 +64,10 @@ for node in data['nodes']:
         value = urllib.quote(s)#convert normal string into url format
         type = 'PythonSource'
 
-
-
     elif type == 'String':
-        value = node['fields']['in'][0]['val']
+        value = str(node['fields']['in'][0]['val'])
     elif type == 'Integer':
-        value = node['fields']['in'][0]['val']
+        value = str(node['fields']['in'][0]['val'])
         # save nid of integer nodes to later check if it occurs in between workflow flow or as a starting point
         # This is done because integer can act as a convertor from int to string also for SUM
         integerNodes.append(id)
@@ -150,13 +144,13 @@ for mod in modules:
     inner.attrib['namespace'] = ''
     inner.attrib['package'] = web2vt.get_package(mod.type)
     inner.attrib['version'] = web2vt.get_version(mod.type)
-
+    
     mod.vt_id = count['module']
     mod.package = web2vt.get_package(mod.type)
     count['add'] += 1
     count['action'] += 1
     count['module'] += 1
-
+    
     add2 = ElementTree.SubElement(act, 'add')
     add2.attrib['id'] = str(count['add'])
     add2.attrib['objectId'] = str(count['module'] - 1)
@@ -173,7 +167,7 @@ for mod in modules:
     innerport = [None]*(len(inportname))
     addport2 = [None]*(len(outportname))
     outterport = [None]*(len(outportname))
-
+    
     if mod.type == 'PythonSource':
         j = 0
         for i in range(0, len(inportname)):
@@ -360,7 +354,7 @@ for link in links:
     modport1 = link.port_a
 
     try:
-        port.attrib['name'] = get_port_name(mod1.type, link.port_a)
+        port.attrib['name'] = web2vt.get_port_name(mod1.type, link.port_a)
     except KeyError:
         port.attrib['name'] = str(modport1)#inportname[0]
     try:
@@ -368,7 +362,7 @@ for link in links:
     except KeyError:
         port.attrib['signature'] = '(org.vistrails.vistrails.basic:String)'
     try:
-        port.attrib['type'] = get_port_type(mod1.type, link.port_a)
+        port.attrib['type'] = web2vt.get_port_type(mod1.type, link.port_a)
     except KeyError:
         if modport1 in inportname.values():
             port.attrib['type'] = 'destination'#inporttype[0]
@@ -398,7 +392,7 @@ for link in links:
     modname2 = mod2.type
     modport2 = link.port_b
     try:
-        port2.attrib['name'] = get_port_name(mod2.type, link.port_b)
+        port2.attrib['name'] = web2vt.get_port_name(mod2.type, link.port_b)
     except KeyError:
         port2.attrib['name'] = str(modport2)
     try:
@@ -406,7 +400,7 @@ for link in links:
     except KeyError:
         port2.attrib['signature'] = '(org.vistrails.vistrails.basic:String)'
     try:
-        port2.attrib['type'] = get_port_type(mod2.type, link.port_b)
+        port2.attrib['type'] = web2vt.get_port_type(mod2.type, link.port_b)
     except KeyError:
         if modport2 in inportname.values():
             port2.attrib['type'] = 'destination'#inporttype[0]
