@@ -1,29 +1,188 @@
 {
-	"name_mapping" : {
-		"Integer" : "Integer",
-		"String" : "String",
-		"List" : "List",
-		"ConcatenateString" : "ConcatenateString",
-		"WriteFile" : "WriteFile",
-		"FileSink" : "FileSink",
-		"Sum" : "Sum",
-		"PythonSource" : "PythonSource",
-		"File" : "File",
- 		"MatlabSource" : "MatlabSource",
-		"Float" : "Float"
-	},
-	"package_mapping" : {
-		"Integer" : "org.vistrails.vistrails.basic",
-		"String" : "org.vistrails.vistrails.basic",
-		"List" : "org.vistrails.vistrails.basic",
-		"ConcatenateString" : "org.vistrails.vistrails.basic",
-		"WriteFile" : "org.vistrails.vistrails.basic",
-		"FileSink" : "org.vistrails.vistrails.basic",
-   		"Sum" : "org.vistrails.vistrails.control_flow",
-		"PythonSource" : "org.vistrails.vistrails.basic",
- 		"MatlabSource" : "org.vistrails.vistrails.basic",
-   		"File" : "org.vistrails.vistrails.basic",
-		"Float" : "org.vistrails.vistrails.basic"
+    "name_mapping" : {
+        "Integer" : "Integer",
+        "String" : "String",
+        "List" : "List",
+        "ConcatenateString" : "ConcatenateString",
+        "WriteFile" : "WriteFile",
+        "FileSink" : "FileSink",
+        "Sum" : "Sum",
+        "PythonSource" : "PythonSource",
+        "File" : "File",
+         "MatlabSource" : "MatlabSource",
+        "Float" : "Float"
+    },
+    "package_mapping" : {
+        "Integer" : "org.vistrails.vistrails.basic",
+        "String" : "org.vistrails.vistrails.basic",
+        "List" : "org.vistrails.vistrails.basic",
+        "ConcatenateString" : "org.vistrails.vistrails.basic",
+        "WriteFile" : "org.vistrails.vistrails.basic",
+        "FileSink" : "org.vistrails.vistrails.basic",
+           "Sum" : "org.vistrails.vistrails.control_flow",
+        "PythonSource" : "org.vistrails.vistrails.basic",
+         "MatlabSource" : "org.vistrails.vistrails.basic",
+           "File" : "org.vistrails.vistrails.basic",
+        "Float" : "org.vistrails.vistrails.basic"
+    },
+    "sig_mapping" : {
+        "Integer" : {
+            "out" : "(org.vistrails.vistrails.basic:Integer)",
+            "out0": "(org.vistrails.vistrails.basic:Integer)",
+            "in" : "(org.vistrails.vistrails.basic:Integer)"
+        },
+        "Float" : {
+            "out1" : "(org.vistrails.vistrails.basic:Float)",
+            "out0": "(org.vistrails.vistrails.basic:String)",
+            "in" : "(org.vistrails.vistrails.basic:Float)"
+        },
+           "String" : {
+            "out" : "(org.vistrails.vistrails.basic:String)",
+            "string" : "(org.vistrails.vistrails.basic:String)"
+        },
+        "List" : {
+            "in0" : "(org.vistrails.vistrails.basic:Module)",
+            "in1" : "(org.vistrails.vistrails.basic:Module)",
+                "out0" : "(org.vistrails.vistrails.basic:List)"
+        },
+           "ConcatenateString" : {
+            "val1" : "(org.vistrails.vistrails.basic:String)",
+            "val2" : "(org.vistrails.vistrails.basic:String)",
+            "out" : "(org.vistrails.vistrails.basic:String)"
+        },
+        "WriteFile" : {
+            "in" : "(org.vistrails.vistrails.basic:String)",
+            "out" : "(org.vistrails.vistrails.basic:File)"
+        },
+        "FileSink" : {
+            "in0" : "(org.vistrails.vistrails.basic:File)"
+        },
+        "Sum" : {
+              "val" : "(org.vistrails.vistrails.basic:List)",
+            "out" : "(org.vistrails.vistrails.basic:Variant)"
+        },
+        "PythonSource" : {
+            "out" : "(org.vistrails.vistrails.basic:String)"
+        },
+        "MatlabSource" : {
+            "out" : "(org.vistrails.vistrails.basic:String)"
+        },
+        "File" : {
+            "out" : "(org.vistrails.vistrails.basic:File)"
+           }
+    },
+    "version_mapping" : {
+        "Integer" : "2.1",
+        "String" : "2.1",
+        "List" : "2.1",
+        "ConcatenateString" : "2.1",
+        "WriteFile" : "2.1",
+        "FileSink" : "2.1",
+        "Sum" : "0.2.4",
+        "PythonSource" : "2.1",
+        "MatlabSource" : "2.1",
+        "Float" : "2.1",
+        "File" : "" 
+    },
+    "port_name_mapping" : {
+        "Integer" : {
+            "out" : "value",
+            "out0": "value_as_string",
+            "in" : "value"
+        },
+        "Float" : {
+            "out" : "value",
+            "out0": "value_as_string",
+            "in" : "value"
+        },
+        "String" : {
+            "out" : "value",
+            "string" : "value"
+        },
+        "List" : {
+            "in0" : "head",
+            "in1" : "head",
+            "out0" : "value"
+        },
+        "ConcatenateString" : {
+            "val1" : "str1",
+            "val2" : "str2",
+            "out" : "value"
+        },
+        "WriteFile" : {
+            "in" : "in_value",
+            "out" : "out_value"
+        },
+        "FileSink" : {
+            "in0" : "file"
+        },    
+        "Sum" : {
+            "val" : "InputList",
+            "out" : "Result"
+        },
+        "PythonSource" : {
+            "out" : "source",
+            "string" : "source"
+        },
+        "MatlabSource" : {
+            "out" : "source",
+            "string" : "source"
+        },
+        "File" : {
+            "out" : "source"
+        }
+    },
+	"port_type_mapping" : {
+    	"Integer" : {
+        	"out" : "source",
+       		"out0": "source",
+        	"in" : "destination"
+   		},
+    	"Float" : {
+        	"out" : "source",
+       		"out0": "source",
+        	"in" : "destination"
+   		},
+	    "String" : {
+    	    "out" : "source",
+        	"string" : "destination"
+	    },
+    	"List" : {
+        	"in0" : "destination",
+	        "in1" : "destination",
+    	    "out0" : "source"
+	    },
+    	"ConcatenateString" : {
+        	"val1" : "destination",
+	        "val2" : "destination",
+    	    "out" : "source"
+	    },
+    	"WriteFile" : {
+        	"out" : "source",
+	        "in" : "destination"
+    	},
+	    "FileSink" : {
+    	    "in0" : "destination"
+	    },	
+    	"Sum" : {
+        	"val" : "destination",
+	        "out" : "source"
+	    },
+	    "PythonSource" : {
+    	    "out" : "source",
+        	"string" : "destination",
+	        "custom_in" : "destination",
+    	    "custom_out" : "source"
+	    },
+    	"MatlabSource" : {
+        	"out" : "source",
+	        "string" : "destination",
+    	    "custom_in" : "destination",
+        	"custom_out" : "source"
+	    },
+    	"File" : {
+        	"out" : "source"
+	    }
 	}
 }
 
