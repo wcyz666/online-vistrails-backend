@@ -67,7 +67,7 @@ for node in data['nodes']:
     elif type == 'String':
         value = str(node['fields']['in'][0]['val'])
     elif type == 'Integer':
-        value = str(node['fields']['in'][0]['val'])
+        value = node['fields']['in'][0]['val']
         # save nid of integer nodes to later check if it occurs in between workflow flow or as a starting point
         # This is done because integer can act as a convertor from int to string also for SUM
         integerNodes.append(id)
@@ -310,7 +310,7 @@ for mod in modules:
         in_param.attrib['name'] = '<no description>'
         in_param.attrib['pos'] = '0'
         in_param.attrib['type'] = add_type
-        in_param.attrib['val'] = mod.value
+        in_param.attrib['val'] = str(mod.value)
 
         count['add'] += 1
         count['parameter'] += 1

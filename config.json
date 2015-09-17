@@ -28,7 +28,7 @@
     "sig_mapping" : {
         "Integer" : {
             "out" : "(org.vistrails.vistrails.basic:Integer)",
-            "out0": "(org.vistrails.vistrails.basic:Integer)",
+            "out0": "(org.vistrails.vistrails.basic:String)",
             "in" : "(org.vistrails.vistrails.basic:Integer)"
         },
         "Float" : {
