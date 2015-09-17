@@ -66,6 +66,8 @@ for node in data['nodes']:
 
     elif type == 'String':
         value = str(node['fields']['in'][0]['val'])
+    elif type == 'Float':
+        value = node['fields']['in'][0]['val']
     elif type == 'Integer':
         value = node['fields']['in'][0]['val']
         # save nid of integer nodes to later check if it occurs in between workflow flow or as a starting point
@@ -266,6 +268,11 @@ for mod in modules:
     if mod.type == 'Integer' and  mod.id != ignoreValueIntegerNode:
         add_value = True
         add_type = 'org.vistrails.vistrails.basic:Integer'
+        add_name = 'value'
+            
+    if mod.type == 'Float' and  mod.id != ignoreValueIntegerNode:
+        add_value = True
+        add_type = 'org.vistrails.vistrails.basic:Float'
         add_name = 'value'
             
     if mod.type == 'PythonSource' and mod.value != '':
